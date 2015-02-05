@@ -25,12 +25,124 @@
 	</div>
 <div id="md" style="display: none;">
 <!-- markdown -->
+##可变参数 
+###例子
+* 函数调用时自动组装成tuple（相对于list，list内容可变，tuple内容不可变）
+* 
+计算 a²+b².....
+####定义：  参数为list 或者tuple 加*后 变为可变参数
+
+  def calc(*numbers):
+
+      sum=0
+      for n in numbers:
+          sum=sum+n*n
+      return sum
+#
+    nums=[1,2,3]
+    calc(*nums)
+
+##关键字参数
+###例子
+* 函数内部自动组装成dict 参数含有参数名称 关键字参数为了扩展函数的功能而生 
+#
+def person(name, age, **kw):
+
+    print 'name:', name, 'age:', age, 'other:', kw
+#
+* name, age 为必选关键字  kw为可选关键字 
+##
+##参数组合##
+* 在Python中定义函数，可以用必选参数、默认参数、可变参数和关键字参数，这4种参数都可以一起使用，或者只用其中某些，但是请注意，参数定义的顺序必须是：必选参数、默认参数、可变参数和关键字参数。
+#
+##小结
+1.  Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。
+
+默认参数一定要用不可变对象，如果是可变对象，运行会有逻辑错误！
+2. 要注意定义可变参数和关键字参数的语法：
+
+* *args是可变参数，args接收的是一个tuple；
+
+* **kw是关键字参数，kw接收的是一个dict。
+#
+3.调用函数时如何传入可变参数和关键字参数的语法：
+
+* 可变参数既可以直接传入：func(1, 2, 3)，又可以先组装list或tuple，再通过*args传入：func(*(1, 2, 3))；
+
+* 关键字参数既可以直接传入：func(a=1, b=2)，又可以先组装dict，再通过**kw传入：func(**{'a': 1, 'b': 2})。
+
+* 使用*args和**kw是Python的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。
+
 
 <!-- markdown end -->
 </div>
 <div class="entry" id="main">
 <!-- content -->
+<h2 id="">可变参数</h2>
 
+<h3 id="">例子</h3>
+
+<ul>
+<li>函数调用时自动组装成tuple（相对于list，list内容可变，tuple内容不可变）</li>
+<li>
+计算 a²+b².....</li>
+</ul>
+
+<h4 id="listtuple">定义：  参数为list 或者tuple 加*后 变为可变参数</h4>
+
+<p>def calc(*numbers):</p>
+
+<pre><code>  sum=0
+  for n in numbers:
+      sum=sum+n*n
+  return sum
+</code></pre>
+
+<p>#
+    nums=[1,2,3]
+    calc(*nums)</p>
+
+<h2 id="">关键字参数</h2>
+
+<h3 id="">例子</h3>
+
+<ul>
+<li><p>函数内部自动组装成dict 参数含有参数名称 关键字参数为了扩展函数的功能而生 
+#
+def person(name, age, **kw):</p>
+
+<p>print 'name:', name, 'age:', age, 'other:', kw
+#</p></li>
+<li>name, age 为必选关键字  kw为可选关键字 </li>
+</ul>
+
+<h1 id="">#</h1>
+
+<h2 id="">参数组合</h2>
+
+<ul>
+<li>在Python中定义函数，可以用必选参数、默认参数、可变参数和关键字参数，这4种参数都可以一起使用，或者只用其中某些，但是请注意，参数定义的顺序必须是：必选参数、默认参数、可变参数和关键字参数。
+#</li>
+</ul>
+
+<h2 id="">小结</h2>
+
+<ol>
+<li>Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。</li>
+</ol>
+
+<p>默认参数一定要用不可变对象，如果是可变对象，运行会有逻辑错误！
+2. 要注意定义可变参数和关键字参数的语法：</p>
+
+<ul>
+<li><p>*args是可变参数，args接收的是一个tuple；</p></li>
+<li><p>**kw是关键字参数，kw接收的是一个dict。
+#
+3.调用函数时如何传入可变参数和关键字参数的语法：</p></li>
+<li><p>可变参数既可以直接传入：func(1, 2, 3)，又可以先组装list或tuple，再通过<em>args传入：func(</em>(1, 2, 3))；</p></li>
+<li><p>关键字参数既可以直接传入：func(a=1, b=2)，又可以先组装dict，再通过<strong>kw传入：func(</strong>{'a': 1, 'b': 2})。</p></li>
+<li><p>使用<em>args和</em>*kw是Python的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。</p></li>
+</ul>
 <!-- content end -->
 </div>
 <br>
