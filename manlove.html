@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="blog"/>
+    <meta name="Description" content="blog"/>
+    <title>Simple</title>
+    <link rel="shortcut icon" href="/static/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+<div class="main">
+    <div class="header">
+    	<ul id="pages">
+            <li><a href="/">home</a></li>
+            <li><a href="/#/tags">tags</a></li>
+            <li><a href="/#/archive">archive</a></li>
+    	</ul>
+    </div>
+	<div class="wrap-header">
+	<h1>
+    <a href="/" id="title"></a>
+	</h1>
+	</div>
+<div id="md" style="display: none;">
+<!-- markdown -->
+##美人图
+
+******
+介绍：
+
+美人图是一款业余时间开发的小app.完全开源，项目采用mvp架构模式开发，因为第一次实践mvp,所以可能会有不合理之处。
+
+
+###Prefix
+******
+
+美丽，源自自然。
+美丽，源于身心。
+根据英国一份医学杂志报道，欣赏美图，可以延长平均寿命4至5年。
+当您彬彬有礼地凝视着她，就好像是欣赏美丽的风景画一样，有助于身心健康。
+所以，请尽情欣赏吧~~
+
+###项目截图
+
+![1](/apps/manlove/c.png)
+
+![2](/apps/manlove/a.png)
+
+![3](/apps/manlove/b.png)
+
+![4](/apps/manlove/d.png)
+
+![5](/apps/manlove/e.png)
+<!-- markdown end -->
+</div>
+<div class="entry" id="main">
+<!-- content -->
+<h2 id="">美人图</h2>
+
+<hr>
+
+<p>介绍：</p>
+
+<p>美人图是一款业余时间开发的小app.完全开源，项目采用mvp架构模式开发，因为第一次实践mvp,所以可能会有不合理之处。</p>
+
+<h3 id="prefix">Prefix</h3>
+
+<hr>
+
+<p>美丽，源自自然。
+美丽，源于身心。
+根据英国一份医学杂志报道，欣赏美图，可以延长平均寿命4至5年。
+当您彬彬有礼地凝视着她，就好像是欣赏美丽的风景画一样，有助于身心健康。
+所以，请尽情欣赏吧~~</p>
+
+<h3 id="">项目截图</h3>
+
+<p><img src="/apps/manlove/c.png" alt="1" title=""></p>
+
+<p><img src="/apps/manlove/a.png" alt="2" title=""></p>
+
+<p><img src="/apps/manlove/b.png" alt="3" title=""></p>
+
+<p><img src="/apps/manlove/d.png" alt="4" title=""></p>
+
+<p><img src="/apps/manlove/e.png" alt="5" title=""></p>
+<!-- content end -->
+</div>
+<br>
+<br>
+    <div id="disqus_thread"></div>
+	<div class="footer">
+		<p>© Copyright 2014 by isnowfy, Designed by isnowfy</p>
+	</div>
+</div>
+<script src="main.js"></script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ["\\(", "\\)"]], processEscapes: true}});
+</script>
+<script id="content" type="text/mustache">
+    <h1>{{title}}</h1>
+    <div class="tag">
+    {{date}}
+    {{#tags}}
+    <a href="/#/tag/{{name}}">#{{name}}</a>
+    {{/tags}}
+    </div>
+</script>
+<script id="pagesTemplate" type="text/mustache">
+    {{#pages}}
+    <li>
+        <a href="{{path}}">{{title}}</a>
+    </li>
+    {{/pages}}
+</script>
+<script>
+$(document).ready(function() {
+    $.ajax({
+        url: "main.json",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $("#title").html(data.name);
+            var pagesTemplate = Hogan.compile($("#pagesTemplate").html());
+            var pagesHtml = pagesTemplate.render({"pages": data.pages});
+            $("#pages").append(pagesHtml);
+            //path
+            var path = "manlove.html";
+            //path end
+            var now = 0;
+            for (var i = 0; i < data.posts.length; ++i)
+                if (path == data.posts[i].path)
+                    now = i;
+            var post = data.posts[now];
+            var tmp = post.tags.split(" ");
+            var tags = [];
+            for (var i = 0; i < tmp.length; ++i)
+                if (tmp[i].length > 0)
+                    tags.push({"name": tmp[i]});
+            var contentTemplate = Hogan.compile($("#content").html());
+            var contentHtml = contentTemplate.render({"title": post.title, "tags": tags, "date": post.date});
+            $("#main").prepend(contentHtml);
+            if (data.disqus_shortname.length > 0) {
+                var disqus_shortname = data.disqus_shortname;
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
