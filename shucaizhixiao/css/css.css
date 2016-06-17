@@ -2,14 +2,16 @@ body{
 	background-color: #fff;
 }
 .main{
-	width: 100%;
+	width: 90%;
 	height: auto;
+	margin: auto;
+	background-color: #fff;
 }
 .main h1{
 	width: 100%;
 	height:auto;
 	line-height: 25px;
-	font-size: 14px;
+	font-size: 18px;
 	font-family: "微软雅黑";
 	padding-top: 10px;
 	padding-bottom: 5px;		
@@ -17,7 +19,7 @@ body{
 .main h2{
 	width: 100%;
 	height:auto;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "微软雅黑";
 	color: #b7b7b7;
 }
@@ -39,8 +41,9 @@ body{
 
 
 .aixin{
-	width: 100%;
+	width: 90%;
 	height:auto;
+	margin: auto;
 }
 .aixin img{
 	width: 100%;
@@ -78,7 +81,7 @@ body{
 .ipone_nav_img span{
 	line-height: 33px;
 	font-size: 14px;
-	left: 40%;
+	left: 50%;
 	font-family: "微软雅黑";
 	position: absolute;
 }
@@ -89,9 +92,8 @@ body{
 	color: #cd0000;
 	text-align: center;
 	line-height: 50px;
-	font-size: 14px;
 	margin-left: 6%;
-	font-size: 18px;
+	font-size: 22px;
 	font-family: "微软雅黑";
     font-weight: bolder;
     text-indent: 24px;
@@ -99,10 +101,9 @@ body{
     border-bottom: 1px #cd0000 dashed;
 }
 .ipone_nav_p span{
-	font-size: 14px;
+	font-size: 18px;
 	font-weight:normal;
-	color: #000000;
-	text-decoration:line-through;
+	color: #404c26;
 }
 .ipone_img{
 	width: 100%;
@@ -128,7 +129,7 @@ body{
 	text-align: center;
 	line-height: 25px;
 	color: #cd0000;
-	font-size: 18px;
+	font-size: 22px;
 	font-family: "微软雅黑";
 	font-weight: bolder;
 	padding-top: 20px;
@@ -137,7 +138,7 @@ body{
 	width: 100%;
 	height:20;
 	line-height: 20px;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "微软雅黑";
 	padding-top: 10px;
 	padding-bottom: 5px;
@@ -145,13 +146,13 @@ body{
 	text-align: center;
 }
 .ipone_images h3{
-	width:16%;
+	width:28%;
 	height:25px;
 	margin: auto;
 	text-align: center;
 	line-height: 25px;
 	color: #cd0000;
-	font-size: 14px;
+	font-size: 18px;
 	font-family: "微软雅黑";
 	font-weight: bolder;
 	padding-top: 30px;
@@ -161,10 +162,10 @@ body{
 	width: 100%;
 	height:20;
 	line-height: 20px;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "微软雅黑";
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	color: #acacac;
 	text-align: center;
 }
