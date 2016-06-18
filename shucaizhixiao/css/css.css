@@ -59,6 +59,7 @@ body{
 	width: 90%;
 	height: auto;
 	margin: auto;
+	list-style-type: none;
 }
 .ipone_nav{
 	width:auto;
