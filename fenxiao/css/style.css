@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*公用*/
+.main{
+	width: 100%;
+	height:auto;
+	border-top: 1px #c9c9c9 solid;
+	background-color: #f7f7f7;
+}
+.main-color{
+	background-color: #f7f7f7;
+}
+
+/*公用*/
+
+
+
+
+
+/*搜索*/
+.sousuo{
+	width: 90%;
+	height: 90px;
+	margin: auto;
+	padding-top: 30px;
+}
+.sousuo-input{
+	width: 78%;
+	height: 65px;
+	border: 1px #999999 solid;
+	border-radius: 8px;
+	font-size: 16px;
+	text-indent: 64px;
+	background-image:url(../images/sousuo.png);
+	background-repeat: no-repeat;
+	background-position: 20px 15px;
+}
+.sousuo-button{
+	width: 20%;
+	height: 65px;
+	float: right;
+	border-radius: 8px;
+	background-color: #C7003B;
+	color: #fff;
+	text-align: center;
+	line-height: 65px;
+	font-size: 30px;
+	font-family:"微软雅黑" ;
+}
+
+
+
+
+
+
+
+.main-l{
+	width: 32%;
+	height: auto;
+	border-right: 1px #c9c9c9 solid;
+	float: left;
+	background-color: #fff;
+}
+.main-l ul li{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #333333;
+	font-family: "微软雅黑";
+	border-bottom: 1px #c9c9c9 solid;
+}
+.main-l ul li a{
+	color: #333333;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+.main-l ul li.on{
+	background-image: url(../images/bj.jpg);
+	background-repeat: no-repeat;
+	background-size:12px 80px;
+	display: block;
+}
+.main-r{
+	float: right;
+	width: 66%;
+	height: auto;
+}
+.main-r ul li{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	margin-top: 20px;
+} 
+.main-r-left{
+	width: 160px;
+	height: 160px;
+	float: left;
+	padding-left: 4%;
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+.main-r-left img{
+	width: 100%;
+	border-radius: 5px;
+}
+.main-r-right{
+	width: auto;
+    height: auto;
+}
+.main-r-right h1{
+	width: auto;
+	text-indent: 24px;
+	height: 50px;
+	font-family: "微软雅黑";
+	padding-top: 50px;
+	color: #333333;
+	font-size: 20px;
+	overflow: hidden;
+}
+.main-r-right a{
+	color: #333333;
+}
+.main-r-right h2{
+	width: auto;
+	text-indent: 24px;
+	height: 50px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #c7003b;
+}
+.main-r-right img{
+	padding-left: 24px;
+	width: 30%;
+}
+
+
