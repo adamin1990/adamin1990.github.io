@@ -59,7 +59,7 @@
 
 
 .main-l{
-	width: 32%;
+	width: 35%;
 	height: auto;
 	border-right: 1px #c9c9c9 solid;
 	float: left;
@@ -67,8 +67,8 @@
 }
 .main-l ul li{
 	width: 100%;
-	height: 80px;
-	line-height: 80px;
+	height: 160px;
+	line-height: 160px;
 	text-align: center;
 	color: #333333;
 	font-family: "微软雅黑";
@@ -82,12 +82,12 @@
 .main-l ul li.on{
 	background-image: url(../images/bj.jpg);
 	background-repeat: no-repeat;
-	background-size:12px 80px;
+	background-size:12px 160px;
 	display: block;
 }
 .main-r{
 	float: right;
-	width: 66%;
+	width: 63%;
 	height: auto;
 }
 
@@ -98,8 +98,8 @@
 	margin-top: 20px;
 } 
 .main-r-left{
-	width: 160px;
-	height: 160px;
+	width: 200px;
+	height: 200px;
 	float: left;
 	padding-left: 4%;
 	padding-top: 6%;
@@ -116,27 +116,34 @@
 .main-r-right h1{
 	width: auto;
 	text-indent: 24px;
-	height: 50px;
+	height: 70px;
+	line-height: 80px;
 	font-family: "微软雅黑";
-	padding-top: 50px;
+	padding-top: 40px;
 	color: #333333;
-	font-size: 20px;
+	font-size: 40px;
 	overflow: hidden;
 }
 .main-r-right a{
 	color: #333333;
+	font-family: "微软雅黑";
 }
 .main-r-right h2{
 	width: auto;
 	text-indent: 24px;
-	height: 50px;
-	font-size: 16px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 30px;
 	font-family: "微软雅黑";
 	color: #c7003b;
+	overflow: hidden;
 }
 .main-r-right img{
 	padding-left: 24px;
-	width: 30%;
+	width: 40%;
 }
-
+.main-r-right h2 span{
+	width: 40%;
+	color: #333333;
+}
 
