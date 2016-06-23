@@ -44,7 +44,7 @@
 	width: 20%;
 	height: 95px;
 	float: right;
-	border-radius: 8px;
+	border-radius: 2px;
 	background-color: #C7003B;
 	color: #fff;
 	text-align: center;
@@ -133,7 +133,7 @@
 	width: auto;
 	text-indent: 24px;
 	height: 80px;
-	line-height: 80px;
+	line-height: 65px;
 	font-size: 30px;
 	font-family: "微软雅黑";
 	color: #c7003b;
